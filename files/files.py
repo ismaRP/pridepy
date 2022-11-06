@@ -88,7 +88,7 @@ class Files:
             logging.debug('ftp_filepath:' + ftp_filepath)
             public_filepath_part = ftp_filepath.rsplit('/', 1)
             logging.debug(file['accession'] + " -> " + public_filepath_part[1])
-            new_file_path = file['accession'] + "-" + public_filepath_part[1]
+            new_file_path = public_filepath_part[1]
             urllib.request.urlretrieve(ftp_filepath, output_folder + new_file_path)
 
     def get_submitted_file_path_prefix(self, accession):
